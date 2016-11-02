@@ -15,7 +15,8 @@ RUN curl -Lo docker-compose https://github.com/docker/compose/releases/download/
 RUN apk upgrade -U && \
     apk --update --repository=http://dl-cdn.alpinelinux.org/alpine/edge/main add \
     git \
-    libressl
+    libressl \
+    tar
 
 RUN apk upgrade -U && \
     apk --update --repository=http://dl-cdn.alpinelinux.org/alpine/edge/community add \
@@ -32,7 +33,9 @@ RUN apk upgrade -U && \
     php7-mysqli \
     php7-ctype \
     php7-opcache \
-    php7-mbstring
+    php7-mbstring \
+    php7-zip \
+    php7-zlib
 
 RUN ln -s /etc/php7 /etc/php && \
     ln -s /usr/bin/php7 /usr/bin/php && \
