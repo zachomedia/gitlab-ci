@@ -16,6 +16,7 @@ RUN apk upgrade -U && \
     apk --update --repository=http://dl-cdn.alpinelinux.org/alpine/edge/main add \
     git \
     libressl \
+    make \
     tar
 
 RUN apk upgrade -U && \
