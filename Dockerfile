@@ -14,6 +14,7 @@ RUN curl -Lo docker-compose https://github.com/docker/compose/releases/download/
 
 RUN apk upgrade -U && \
     apk --update --repository=http://dl-cdn.alpinelinux.org/alpine/edge/main add \
+    bash \
     git \
     libressl \
     make \
