@@ -8,6 +8,7 @@ RUN apk --update add \
     curl \
     git \
     make \
+    openssh-client \
     tar
 
 # Docker Compose with glibc bypass.
@@ -51,3 +52,6 @@ RUN curl -sS https://getcomposer.org/installer | php \
 RUN curl -Lo docker-compose https://github.com/docker/compose/releases/download/1.8.1/docker-compose-Linux-x86_64 && \
     chmod +x docker-compose && \
     mv docker-compose /usr/local/bin
+
+# Security fix for CVE-2016-0777 and CVE-2016-0778
+RUN echo -e 'Host *\nUseRoaming no' >> /etc/ssh/ssh_config
