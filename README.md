@@ -31,7 +31,7 @@ docker run -d \
 
 ```
 $ docker run  --privileged \
-  -e DOCKER_DAEMON_ARGS=--insecure-registry=http://<addr>:5000 --registry-mirror=<addr>:5000 \
+  -e DOCKER_DAEMON_ARGS=--insecure-registry=<addr>:5000 --registry-mirror=http://<addr>:5000 \
   -d drupalwxt/docker:dind
 ```
 

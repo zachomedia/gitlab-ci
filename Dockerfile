@@ -55,3 +55,8 @@ RUN curl -Lo docker-compose https://github.com/docker/compose/releases/download/
 
 # Security fix for CVE-2016-0777 and CVE-2016-0778
 RUN echo -e 'Host *\nUseRoaming no' >> /etc/ssh/ssh_config
+
+COPY docker-entrypoint.sh /usr/local/bin/
+
+ENTRYPOINT ["docker-entrypoint.sh"]
+CMD ["sh"]
