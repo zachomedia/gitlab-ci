@@ -9,6 +9,7 @@ RUN apk --update add \
     git \
     make \
     openssh-client \
+    patch \
     tar
 
 # Docker Compose with glibc bypass.
