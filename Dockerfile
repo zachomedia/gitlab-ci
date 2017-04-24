@@ -1,4 +1,4 @@
-FROM docker
+FROM docker:17.04
 MAINTAINER William Hearn <sylus1984@gmail.com>
 
 # Custom additions for test runner.
