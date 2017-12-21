@@ -50,7 +50,7 @@ RUN curl -sS https://getcomposer.org/installer | php \
     && mv composer.phar /usr/local/bin/composer
 
 # Install Docker Compose.
-RUN curl -Lo docker-compose https://github.com/docker/compose/releases/download/1.8.1/docker-compose-Linux-x86_64 && \
+RUN curl -Lo docker-compose https://github.com/docker/compose/releases/download/1.18.0/docker-compose-Linux-x86_64 && \
     chmod +x docker-compose && \
     mv docker-compose /usr/local/bin
 
